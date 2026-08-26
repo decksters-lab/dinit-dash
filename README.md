@@ -1,5 +1,7 @@
 # Dinit Dash
 
+![Dinit Dash](docs/screenshot.png)
+
 A modern service manager GUI for [Dinit](https://davmac.org/projects/dinit/), ported from
 [CTL Dash](https://github.com/nikelaz/ctldash) (which talks to systemd over D-Bus).
 
