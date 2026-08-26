@@ -67,7 +67,7 @@ impl cosmic::Application for AppModel {
         // Create the about widget
         let about = About::default()
             .name(fl!("app-title"))
-            .author("Nikola Lazarov")
+            .author("Kyle Soutar (decksters-lab)")
             .icon(widget::icon::from_svg_bytes(APP_ICON))
             .version(env!("CARGO_PKG_VERSION"))
             .links([
@@ -75,7 +75,10 @@ impl cosmic::Application for AppModel {
                 (fl!("repository"), REPOSITORY),
             ])
             .license(env!("CARGO_PKG_LICENSE"))
-            .developers([("Nikola Lazarov", "nikola.n.lazarov@outlook.com")]);
+            .developers([
+                ("Kyle Soutar (decksters-lab)", "https://github.com/decksters-lab"),
+                ("Nikola Lazarov (Original CTL Dash)", "https://github.com/nikelaz"),
+            ]);
 
         // Construct the app model with the runtime's core.
         let mut app = AppModel {

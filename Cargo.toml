@@ -1,5 +1,6 @@
 [package]
 name = "dinit-dash"
+authors = ["Kyle Soutar <https://github.com/decksters-lab>", "Nikola Lazarov (Original CTL Dash) <https://github.com/nikelaz>"]
 version = "1.0.0"
 edition = "2024"
 license = "MPL-2.0"
@@ -42,6 +43,7 @@ features = [
 
 [[bin]]
 name = "dinit-dash"
+authors = ["Kyle Soutar <https://github.com/decksters-lab>", "Nikola Lazarov (Original CTL Dash) <https://github.com/nikelaz>"]
 path = "src/main.rs"
 
 [patch.crates-io]
