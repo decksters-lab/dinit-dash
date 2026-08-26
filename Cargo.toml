@@ -1,0 +1,48 @@
+[package]
+name = "dinit-dash"
+version = "1.0.0"
+edition = "2024"
+license = "MPL-2.0"
+description = "Displays Dinit services and logs and allows you to enable/disable/start/stop/restart every service."
+repository = "https://github.com/decksters-lab/dinit-dash"
+
+[dependencies]
+futures-util = "0.3.31"
+i18n-embed = { version = "0.16", features = [
+    "fluent-system",
+    "desktop-requester",
+] }
+i18n-embed-fl = "0.10"
+open = "5.3.3"
+libc = "0.2"
+rust-embed = "8.9.0"
+tokio = { version = "1.48.0", features = ["full"] }
+
+# The original ctldash locked cosmic-text to this exact git commit; without the
+# pin, cargo resolves the latest cosmic-text, whose API changed, breaking the
+# pinned libcosmic build. Keep both in lockstep.
+[dependencies.cosmic-text]
+git = "https://github.com/pop-os/cosmic-text.git"
+rev = "7051682e70defcab6b683d6e9db07124a6de0df7"
+
+[dependencies.libcosmic]
+git = "https://github.com/pop-os/libcosmic.git"
+rev = "aabc8dcda530a6ac70617dd578cea55910af53c8"
+features = [
+    "a11y",
+    "about",
+    "dbus-config",
+    "multi-window",
+    "single-instance",
+    "tokio",
+    "winit",
+    "wayland",
+    "wgpu",
+]
+
+[[bin]]
+name = "dinit-dash"
+path = "src/main.rs"
+
+[patch.crates-io]
+proc-macro-error2 = { path = "vendor/proc-macro-error2" }

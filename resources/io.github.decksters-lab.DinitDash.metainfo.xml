@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.decksters-lab.DinitDash</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MPL-2.0</project_license>
+
+  <name>Dinit Dash</name>
+
+  <summary>Manage services</summary>
+  <summary xml:lang="bg">Управление на услуги</summary>
+  <summary xml:lang="cs">Správa služeb</summary>
+
+  <description>
+    <p>
+      Dinit Dash is a Dinit service manager for the COSMIC desktop environment that displays system and user services with their status.
+    </p>
+    <p xml:lang="bg">
+      Dinit Dash е мениджър на Dinit услуги за десктоп средата COSMIC, който показва системни и потребителски услуги заедно с тяхното състояние.
+    </p>
+    <p xml:lang="cs">
+      Dinit Dash je správce služeb Dinit pro prostředí COSMIC, který zobrazuje systémové a uživatelské služby spolu s jejich stavem.
+    </p>
+    <p>Features:</p>
+    <p xml:lang="bg">Функционалности:</p>
+    <p xml:lang="cs">Funkce:</p>
+    <ul>
+      <li>View all Dinit services with their current status</li>
+      <li xml:lang="bg">Преглед на всички Dinit услуги с текущото им състояние</li>
+      <li xml:lang="cs">Zobrazení všech služeb Dinit a jejich aktuálního stavu</li>
+      <li>Manage both system-wide and user services</li>
+      <li xml:lang="bg">Управление на системни и потребителски услуги</li>
+      <li xml:lang="cs">Správa systémových i uživatelských služeb</li>
+      <li>View detailed information about individual services</li>
+      <li xml:lang="bg">Подробна информация за всяка услуга</li>
+      <li xml:lang="cs">Zobrazení podrobných informací o jednotlivých službách</li>
+      <li>Start, stop, restart services from the UI</li>
+      <li xml:lang="bg">Стартиране, спиране и рестартиране на услуги от интерфейса</li>
+      <li xml:lang="cs">Spouštění, zastavování a restartování služeb z uživatelského rozhraní</li>
+      <li>Enable and disable services</li>
+      <li xml:lang="bg">Активиране и деактивиране на услуги</li>
+      <li xml:lang="cs">Povolování a zakazování služeb</li>
+      <li>View service logs</li>
+      <li xml:lang="bg">Преглед на логовете на услугите</li>
+      <li xml:lang="cs">Zobrazení záznamů služeb</li>
+    </ul>
+  </description>
+
+  <developer id="io.github.decksters-lab">
+    <name>Nikola Lazarov</name>
+  </developer>
+
+  <url type="homepage">https://github.com/decksters-lab/dinit-dash</url>
+  <url type="bugtracker">https://github.com/decksters-lab/dinit-dash/issues</url>
+  <url type="vcs-browser">https://github.com/decksters-lab/dinit-dash</url>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#9CA6E1</color>
+    <color type="primary" scheme_preference="dark">#1C2760</color>
+  </branding>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>Services List</caption>
+      <caption xml:lang="bg">Списък с услуги</caption>
+      <caption xml:lang="cs">Seznam služeb</caption>
+      </screenshot>
+    <screenshot>
+      <caption>Service Details</caption>
+      <caption xml:lang="bg">Детайли за услуга</caption>
+      <caption xml:lang="cs">Podrobnosti služeb</caption>
+      </screenshot>
+  </screenshots>
+  <releases> 
+    <release version="1.1.2" date="2025-12-22">
+      <description>
+        <p>Fixes:</p>
+        <ul>
+          <li>Cosmic accent color preference now works in the flatpak</li>
+        </ul>
+        <p>Updates:</p>
+        <ul>
+          <li>Added Bulgarian (bg) translation</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.1" date="2025-12-21">
+      <description>
+        <p>Fixes:</p>
+        <ul>
+          <li>System services were not loading on distros that use SELinux</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.0" date="2025-12-16">
+      <description>
+        <p>Updates:</p>
+        <ul>
+          <li>Refresh in the services list is no longer manual</li>
+          <li>Loader in the services list will only show when opening the app</li>
+          <li>Added cursor interaction indicator (hover) to the list rows</li>
+        </ul>
+        <p>Fixes:</p>
+        <ul>
+          <li>Fixed issue with back button navigation</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.0.0" date="2025-12-13">
+      <description>
+        <p>Initial release</p>
+      </description>
+    </release>
+  </releases>
+  <launchable type="desktop-id">io.github.decksters-lab.DinitDash.desktop</launchable>
+  <provides>
+    <id>com.system76.CosmicApplication</id>
+    <binaries>
+      <binary>ctl-dash</binary>
+    </binaries>
+  </provides>
+  <requires>
+    <display_length compare="ge">800</display_length>
+  </requires>
+  <supports>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </supports>
+  <categories>
+    <category>COSMIC</category>
+  </categories>
+  <keywords>
+    <keyword>COSMIC</keyword>
+  </keywords>
+  <content_rating type="oars-1.1" />
+</component>
