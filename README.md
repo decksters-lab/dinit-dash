@@ -59,12 +59,6 @@ sudo pacman -S --needed base-devel rust cargo pkg-config \
     gtk3 libxkbcommon libxkbcommon-x11 wayland openssl
 ```
 
-**Debian/Ubuntu (or other):**
-
-```sh
-sudo apt install build-essential pkg-config libssl-dev libgtk-3-dev \
-    libxkbcommon-dev libwayland-dev libudev-dev
-```
 
 > The build pulls `libcosmic` from git (rev-pinned). A `Cargo.lock` pins every
 > transitive dependency — including `cosmic-text` — to known-good commits, so
